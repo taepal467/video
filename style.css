@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root{
+    --ff-primary: 'Itim', cursive;
+}
+
+body {
+    font-family: var(--ff-primary);
+    color: #057764;
+}
+
+
+header {
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.switch-btn {
+  background-color: #043F35;
+  border-radius: 50%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  transition-duration: 0.4s;
+}
+
+.switch-btn:hover {
+  background-color: #057764; 
+  color: white;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/*header after- adds overlay to image*/
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
